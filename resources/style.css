@@ -1,0 +1,245 @@
+html, body {
+    margin: 0;
+    height: 100%;
+    font-family: "MS Sans Serif", serif;
+    color: black;
+    user-select: none;
+    overflow: hidden;
+}
+
+body {
+    padding: 2px;
+    box-sizing: border-box;
+    background: transparent;
+}
+
+#mainWindow {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.6), rgba(161, 161, 161, 0.8)) fixed;
+    border-radius: 10px;
+    border: 2px solid #ffffff;
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#inMainWindow {
+    width: 98%;
+    height: 89%;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3)) fixed;
+    border-radius: 18px;
+    font-size: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-top: 35px;
+    flex-direction: column;
+}
+
+#inMainWindow header {
+    height: 95px;
+    width: 90%;
+    position: absolute;
+    top: 12%;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Arial Black", monospace;
+    font-size: 20px;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6));
+    border-radius: 18px;
+    box-shadow: 3px 3px 10px rgba(0,0,0,0.9);
+    text-shadow: #606060 5px 3px 9px;
+    text-align: center;
+    user-select: text;
+}
+
+#trackTitle{
+    height: 95px;
+    width: 95%;
+    position: relative;
+    left: 50%;
+    transform: translateX(-53%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow-y: auto;
+
+}
+#trackTitle::-webkit-scrollbar {
+    scrollbar-width: thin;
+}
+
+
+#draggableRegion {
+    position: absolute;
+    border-radius: 7px 7px 0 0;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #373737;
+    color: #fff;
+    user-select: none;
+    cursor: grab;
+    box-sizing: border-box;
+}
+#folderBtn{
+    position: absolute;
+    top: 9px;
+    left: 42%;
+    background: #b5b5b5;
+    border-radius: 10px;
+    border: #FFFFF3 2px solid;
+    box-sizing: border-box;
+    cursor: pointer;
+    padding: 3px 10px;
+    font-size: 13px;
+    font-weight: bold;
+    font-family:"Arial Black", sans-serif;
+}
+
+#draggableRegion .title {
+    line-height: 1;
+}
+
+#draggableRegion .buttons div {
+    width: 17px;
+    height: 17px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.closeBtn { background: #cd332f;
+    text-align: center;
+    font-size: 14px;
+    line-height: 15px;
+    color: #fff;
+    position: absolute;
+    right: 11px;
+    top: 11px;
+    border-radius: 50%;
+    width: 17px;
+    height: 17px;
+    cursor: pointer;}
+
+.minimizeBtn {
+    background: #eac544;
+    text-align: center;
+    font-size: 14px;
+    line-height: 15px;
+    color: #fff;
+    position:absolute;
+    top: 11px;
+    right: 35px;
+    justify-items: center;
+    width: 17px;
+    height: 17px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+::selection {
+    background: #8A2BE2;
+    color: #ffffff;
+}
+
+#buttonsBarTop{
+    position: absolute;
+    bottom: 9%;
+    right: 27.999%;
+}
+
+#progressSlider{
+    position: absolute;
+    bottom: 5%;
+    width: 90%;
+    cursor: pointer;
+    left:15px;
+    accent-color: #373737;
+}
+
+#buttonsBarLeft{
+    position: absolute;
+    bottom: 9%;
+    left: 5%;
+    filter: saturate(1) grayscale(100);
+}
+#buttonsBarRight{
+    position: absolute;
+    bottom: 9%;
+    right: 5%;
+    filter: saturate(1) grayscale(100);
+}
+
+.button{
+    position: relative;
+    background: #bdbdbd;
+    border-radius: 10px;
+    border: #1c1c1c 2px solid;
+    box-sizing: border-box;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    cursor: pointer;
+    padding: 5px 12px
+}
+
+#timeDisplay{
+    position: absolute;
+    bottom: 1.4%;
+    right: 4%;
+    font-size: 17px;
+    font-family: "Arial Black", monospace;
+}
+
+#timeDisplayEnd{
+    position: absolute;
+    bottom: 1.4%;
+    left: 4%;
+    font-size: 17px;
+    font-family: "Arial Black", monospace;
+}
+
+#volumeSlider{
+    position: absolute;
+    bottom: 15.4%;
+    left: 15px;
+    width: 35%;
+    cursor: pointer;
+    accent-color: #373737;
+}
+
+#volume{
+    position: absolute;
+    bottom: 95px;
+    left: 20px;
+    font-size: 18px;
+    font-weight: bold;
+    font-family:"Arial Black", sans-serif;
+}
+
+#cover{
+    position: absolute;
+    top: 32%;
+    height: 10%;
+    width: 10%;
+}
+
+#coverDiv{
+    position: absolute;
+    top: 170px;
+    height: 200px;
+    width: 200px;
+    background: rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
